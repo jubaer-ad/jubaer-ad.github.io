@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A N M Jubaer | Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            /* Dark theme variables */
+            --background-primary: #121212;
+            --background-secondary: #1e1e1e;
+            --background-tertiary: #252525;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            --skill-bg: #2a2a2a;            
+        }
+
+        [data-theme="light"] {
+            /* Light theme variables */
+            --background-primary: #fafafa;
+            --background-secondary: #ffffff;
+            --background-tertiary: #f7f7f7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #666666;
+            --skill-bg: #f3f4f6;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--background-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-tag {
+            transition: all 0.3s ease;
+            background-color: var(--skill-bg);
+            color: var(--text-primary);
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            padding: 0.75rem;
+            border-radius: 50%;
+            background-color: var(--background-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(180deg);
+        }
+
+        .bg-section {
+            background-color: var(--background-secondary);
+        }
+
+        .project-card {
+            background-color: var(--background-tertiary);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeToggleBtn">
+        <i class="fas fa-moon dark:fas fa-sun"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="min-h-screen flex items-center justify-center px-4 py-16">
+        <div class="max-w-4xl w-full">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text">A N M Jubaer</h1>
+            <p class="text-xl md:text-2xl mb-8 text-muted max-w-2xl">
+                Backend developer crafting solutions in the travel domain. Specializing in .NET, API integration, and machine learning.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-12">
+                <a href="mailto:jubaerad1@gmail.com" class="hover:text-blue-300 transition-colors text-green-500">jubaerad1@gmail.com</a>
+                <a href="https://github.com/jubaer-ad" target="_blank" class="hover:text-blue-300 transition-colors text-green-500">GitHub</a>
+                <a href="https://www.linkedin.com/in/anmjubaer/" target="_blank" class="hover:text-blue-300 transition-colors text-green-500">LinkedIn</a>
+                <a href="https://www.kaggle.com/jubaerad" target="_blank" class="hover:text-blue-300 transition-colors text-green-500">Kaggle</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills -->
+    <section class="py-16 px-4 bg-section">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Technical Expertise</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="skill-tag px-4 py-2 rounded-full">ASP.NET Core</span>
+                <span class="skill-tag px-4 py-2 rounded-full">C#</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Angular</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Dapper</span>
+                <span class="skill-tag px-4 py-2 rounded-full">EF Core</span>
+                <span class="skill-tag px-4 py-2 rounded-full">SQL</span>
+                <span class="skill-tag px-4 py-2 rounded-full">NoSQL</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Spring Boot</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Java SE</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Python</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Git</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Docker</span>
+                <span class="skill-tag px-4 py-2 rounded-full">Scikit-learn</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Experience</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-bold">Software Engineer</h3>
+                <p class="text-muted mb-2">Apurba Technologies Ltd, Dhaka, Bangladesh | 2025 - Present</p>
+                <p>Developing and maintaining .NET Framework WinForms applications, integrating and enhancing system functionality with COM-based APIs.</p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-xl font-bold">Jr. Software Engineer</h3>
+                <p class="text-muted mb-2">TechnoNext Ltd, Dhaka, Bangladesh | 2022 - 2025</p>
+                <p>Backend development with ASP.NET Core, building RESTful APIs and integrating with Global Distribution Systems. Maintained Angular-based admin panels for Online Travel Agencies.</p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-xl font-bold">Assistant Software Engineer</h3>
+                <p class="text-muted mb-2">Millennium Information Solution Ltd, Dhaka, Bangladesh | 2020 - 2021</p>
+                <p>Implemented Java SE and Selenium based automation frameworks for QA processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="py-16 px-4 bg-section">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Notable Projects</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-6 project-card rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Real Time Weapon Detection</h3>
+                    <p>CNN-based weapon detection system using YOLOv3 algorithm, achieving 85% Mean Average Precision on live CCTV feeds.</p>
+                </div>
+
+                <div class="p-6 project-card rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Bangla Toxic Comment Classification</h3>
+                    <p>Published research on toxic comment classification using machine learning and neural networks. Featured in IEEE conference.
+                        Follow at <a href="https://ieeexplore.ieee.org/document/9117286" class="hover:text-blue-300 text-green-500">ieeexplore.ieee.org/document/9117286</a>
+                    </p>
+                </div>
+
+                <div class="p-6 project-card rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Route Planner</h3>
+                    <p>Implementation of shortest path algorithms (Dijkstra's, MST, Bellman Ford) for Dhaka city locations.</p>
+                </div>
+
+                <div class="p-6 project-card rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Palmer Archipelago Analysis</h3>
+                    <p>Comprehensive R-based analysis of Antarctic penguin data with ggplot2 visualizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Awards -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Education & Recognition</h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-bold">B.Sc. in Computer Science & Engineering</h3>
+                <p class="text-muted">Daffodil International University | 2016 - 2020</p>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-bold">Awards</h3>
+                <p>Gold medal (9th) at National Science Olympiad, Bangladesh 2010</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold">Certifications</h3>
+                <p>Google Data Analytics Professional Certificate</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Check for saved theme preference or default to 'light'
+        const getTheme = () => localStorage.getItem('theme') || 'dark';
+
+        // Apply theme to document
+        const applyTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            // Update toggle button icon
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+            icon.title = getIconBtnHoverText(theme);
+        };
+
+        // Toggle theme function
+        const toggleTheme = () => {
+            const currentTheme = getTheme();
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(newTheme);
+        };
+
+        const getIconBtnHoverText = (theme) => {
+            var res = theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode';
+            return res;
+        }
+        
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', () => applyTheme(getTheme()));
+    </script>
+</body>
+</html>
