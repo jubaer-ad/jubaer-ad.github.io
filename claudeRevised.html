@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A N M Jubaer | Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --background-primary: #0a0a0a;
+            --background-secondary: #111111;
+            --background-tertiary: #1a1a1a;
+            --accent-color: #64ffda;
+            --text-primary: #e6e6e6;
+            --text-secondary: #a3a3a3;
+            --border-color: #2a2a2a;
+        }
+
+        [data-theme="light"] {
+            --background-primary: #ffffff;
+            --background-secondary: #f8f8f8;
+            --background-tertiary: #f0f0f0;
+            --accent-color: #0891b2;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --border-color: #e5e5e5;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-primary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-card {
+            background-color: var(--background-secondary);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-tag {
+            background-color: var(--background-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .profile-pic {
+            display: none;
+        }
+
+        .profile-pic.visible {
+            display: block;
+        }
+
+        .theme-toggle {
+            background-color: var(--background-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-opacity-90 backdrop-blur-sm z-50" style="background-color: var(--background-primary)">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold" style="color: var(--accent-color)">ANM</a>
+            <div class="flex items-center gap-6">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-16 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <p class="text-sm mb-4" style="color: var(--accent-color)">Hi, my name is</p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">A N M Jubaer</h1>
+                <p class="text-xl mb-8" style="color: var(--text-secondary)">
+                    Backend developer crafting solutions in the travel domain. Specializing in .NET, API integration, and machine learning.
+                </p>
+                <div class="flex gap-6 mb-8">
+                    <a href="mailto:jubaerad1@gmail.com" class="nav-link">Email</a>
+                    <a href="https://github.com/jubaer-ad" target="_blank" class="nav-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/anmjubaer/" target="_blank" class="nav-link">LinkedIn</a>
+                    <a href="https://www.kaggle.com/jubaerad" target="_blank" class="nav-link">Kaggle</a>
+                </div>
+            </div>
+            <div class="profile-pic w-64 h-64 rounded-full overflow-hidden">
+                <img src="/api/placeholder/256/256" alt="A N M Jubaer" class="w-full h-full object-cover" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="py-16 px-4" style="background-color: var(--background-secondary)">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-8">Technical Expertise</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="skill-tag px-4 py-2 rounded-lg">ASP.NET Core</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">C#</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Angular</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Dapper</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">EF Core</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">SQL</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">NoSQL</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Spring Boot</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Java SE</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Python</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Git</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Docker</span>
+                <span class="skill-tag px-4 py-2 rounded-lg">Scikit-learn</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-8">Experience</h2>
+            <div class="space-y-8">
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold" style="color: var(--accent-color)">Software Engineer</h3>
+                    <p class="text-sm mb-2" style="color: var(--text-secondary)">Apurba Technologies Ltd, Dhaka, Bangladesh | 2025 - Present</p>
+                    <p>Developing and maintaining .NET Framework WinForms applications, integrating and enhancing system functionality with COM-based APIs.</p>
+                </div>
+
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold" style="color: var(--accent-color)">Jr. Software Engineer</h3>
+                    <p class="text-sm mb-2" style="color: var(--text-secondary)">TechnoNext Ltd, Dhaka, Bangladesh | 2022 - 2025</p>
+                    <p>Backend development with ASP.NET Core, building RESTful APIs and integrating with Global Distribution Systems. Maintained Angular-based admin panels for Online Travel Agencies.</p>
+                </div>
+
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold" style="color: var(--accent-color)">Assistant Software Engineer</h3>
+                    <p class="text-sm mb-2" style="color: var(--text-secondary)">Millennium Information Solution Ltd, Dhaka, Bangladesh | 2020 - 2021</p>
+                    <p>Implemented Java SE and Selenium based automation frameworks for QA processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-16 px-4" style="background-color: var(--background-secondary)">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-8">Notable Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--accent-color)">Real Time Weapon Detection</h3>
+                    <p>CNN-based weapon detection system using YOLOv3 algorithm, achieving 85% Mean Average Precision on live CCTV feeds.</p>
+                </div>
+
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--accent-color)">Bangla Toxic Comment Classification</h3>
+                    <p>Published research on toxic comment classification using machine learning and neural networks. Featured in IEEE conference.
+                    <a href="https://ieeexplore.ieee.org/document/9117286" class="block mt-2 nav-link">View Publication</a></p>
+                </div>
+
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--accent-color)">Route Planner</h3>
+                    <p>Implementation of shortest path algorithms (Dijkstra's, MST, Bellman Ford) for Dhaka city locations.</p>
+                </div>
+
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--accent-color)">Palmer Archipelago Analysis</h3>
+                    <p>Comprehensive R-based analysis of Antarctic penguin data with ggplot2 visualizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Awards -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-8">Education & Recognition</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--accent-color)">Education</h3>
+                    <p class="font-medium">B.Sc. in Computer Science & Engineering</p>
+                    <p class="text-sm" style="color: var(--text-secondary)">Daffodil International University | 2016 - 2020</p>
+                </div>
+
+                <div class="section-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--accent-color)">Awards & Certifications</h3>
+                    <p class="mb-2">Gold medal (9th) at National Science Olympiad, Bangladesh 2010</p>
+                    <p>Google Data Analytics Professional Certificate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const getTheme = () => localStorage.getItem('theme') || 'dark';
+        
+        const applyTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        };
+        
+        const toggleTheme = () => {
+            const currentTheme = getTheme();
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(newTheme);
+        };
+
+        // Toggle profile picture visibility
+        const toggleProfilePic = () => {
+            const profilePic = document.querySelector('.profile-pic');
+            profilePic.classList.toggle('visible');
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            applyTheme(getTheme());
+            // Uncomment the line below to show profile picture by default
+            // toggleProfilePic();
+        });
+    </script>
+</body>
+</html>
