@@ -117,20 +117,41 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="fixed w-full bg-opacity-90 backdrop-blur-sm z-50" style="background-color: var(--background-primary)">
+    <nav class="w-full bg-opacity-90 backdrop-blur-sm z-50 md:fixed" style="background-color: var(--background-primary)">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold" style="color: var(--accent-color)">A N M Jubaer | Software
-                Engineer</a>
-            <div class="flex items-center gap-6">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
+          <a href="#" class="text-xl font-bold" style="color: var(--accent-color)">
+            A N M Jubaer | Software Engineer
+          </a>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-500 focus:outline-none">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
-    </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-opacity-90 backdrop-blur-sm" style="background-color: var(--background-primary)">
+          <div class="px-4 py-4 space-y-3">
+            <a href="#about" class="block nav-link">About</a>
+            <a href="#skills" class="block nav-link">Skills</a>
+            <a href="#experience" class="block nav-link">Experience</a>
+            <a href="#projects" class="block nav-link">Projects</a>
+            <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
 
     <!-- Hero Section -->
     <section id="about" class="min-h-screen flex items-center justify-center px-4 py-16">
@@ -154,7 +175,7 @@
     <!-- Photo -->
     <section class="py-16 px-4" style="background-color: var(--background-secondary)">
         <div class="max-w-6xl mx-auto">
-            <div class="profile-pic w-64 h-90 overflow-hidden">
+            <div class="profile-pic w-64 h-90 overflow-hidden mx-auto">
                 <img src="./images/dp-small-600w.jpg" srcset="./images/dp-small-600w.jpg 600w, ./images/dp-mid-1200w.jpg 1200w, ./images/dp-large-1800w.jpg 1800w"
                     sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Description" loading="lazy">
             </div>
@@ -162,7 +183,7 @@
     </section>
 
     <!-- Skills -->
-    <section class="py-16 px-4" style="background-color: var(--background-secondary)">
+    <section id="skills" class="py-16 px-4" style="background-color: var(--background-secondary)">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-2xl font-bold mb-8">Technical Expertise</h2>
             <div class="flex flex-wrap gap-3">
@@ -292,6 +313,13 @@
             const profilePic = document.querySelector('.profile-pic');
             profilePic.classList.toggle('visible');
         };
+
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             applyTheme(getTheme());
