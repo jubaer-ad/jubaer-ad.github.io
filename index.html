@@ -10,6 +10,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
         
         :root {
+            /* Dark theme variables */
+            --background-primary: #121212;
+            --background-secondary: #1e1e1e;
+            --background-tertiary: #252525;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            --skill-bg: #2a2a2a;            
+        }
+
+        [data-theme="light"] {
             /* Light theme variables */
             --background-primary: #fafafa;
             --background-secondary: #ffffff;
@@ -18,17 +29,6 @@
             --text-secondary: #4a4a4a;
             --text-muted: #666666;
             --skill-bg: #f3f4f6;
-        }
-
-        [data-theme="dark"] {
-            /* Dark theme variables */
-            --background-primary: #121212;
-            --background-secondary: #1e1e1e;
-            --background-tertiary: #252525;
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --text-muted: #999999;
-            --skill-bg: #2a2a2a;
         }
         
         body {
@@ -86,7 +86,7 @@
 </head>
 <body>
     <!-- Theme Toggle Button -->
-    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeToggleBtn">
         <i class="fas fa-moon dark:fas fa-sun"></i>
     </button>
 
@@ -208,16 +208,16 @@
 
     <script>
         // Check for saved theme preference or default to 'light'
-        const getTheme = () => localStorage.getItem('theme') || 'light';
+        const getTheme = () => localStorage.getItem('theme') || 'dark';
 
         // Apply theme to document
         const applyTheme = (theme) => {
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            
             // Update toggle button icon
             const icon = document.querySelector('.theme-toggle i');
-            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+            icon.title = getIconBtnHoverText(theme);
         };
 
         // Toggle theme function
@@ -226,6 +226,12 @@
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             applyTheme(newTheme);
         };
+
+        const getIconBtnHoverText = (theme) => {
+            var res = theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode';
+            return res;
+        }
+        
 
         // Initialize theme on page load
         document.addEventListener('DOMContentLoaded', () => applyTheme(getTheme()));
