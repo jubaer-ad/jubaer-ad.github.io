@@ -117,73 +117,95 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="w-full bg-opacity-90 backdrop-blur-sm z-50 md:fixed" style="background-color: var(--background-primary)">
+    <!-- Modify the navigation section as follows -->
+    <nav class="w-full bg-opacity-90 backdrop-blur-sm z-50 md:fixed"
+        style="background-color: var(--background-primary)">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="#" class="text-xl font-bold" style="color: var(--accent-color)">
-            A N M Jubaer | Software Engineer
-          </a>
-          <!-- Desktop Menu -->
-          <div class="hidden md:flex items-center gap-6">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
-              <i class="fas fa-moon"></i>
-            </button>
-          </div>
-          <!-- Mobile Menu Button -->
-          <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-gray-500 focus:outline-none">
-              <i class="fas fa-bars"></i>
-            </button>
-          </div>
+            <!-- Left section: Logo/Name -->
+            <a href="#" class="text-xl font-bold hidden md:block" style="color: var(--accent-color)">
+                A N M Jubaer | Software Engineer
+            </a>
+            <!-- For mobile: Shorter version of the logo -->
+            <a href="#" class="text-lg font-bold md:hidden" style="color: var(--accent-color)">
+                A N M Jubaer
+            </a>
+
+            <!-- Middle section: Clock (visible on all screen sizes) -->
+            <div id="clock" class="font-medium text-xs sm:text-sm md:text-base px-2 py-1 rounded-md"
+                style="background-color: var(--background-tertiary); color: var(--accent-color); border: 1px solid var(--border-color);">
+                <span id="current-time">Loading time...</span>
+            </div>
+
+            <!-- Right section: Navigation items -->
+            <div class="flex items-center">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-opacity-90 backdrop-blur-sm" style="background-color: var(--background-primary)">
-          <div class="px-4 py-4 space-y-3">
-            <a href="#about" class="block nav-link">About</a>
-            <a href="#skills" class="block nav-link">Skills</a>
-            <a href="#experience" class="block nav-link">Experience</a>
-            <a href="#projects" class="block nav-link">Projects</a>
-            <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
-              <i class="fas fa-moon"></i>
-            </button>
-          </div>
+
+        <!-- Mobile Menu (unchanged) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-opacity-90 backdrop-blur-sm"
+            style="background-color: var(--background-primary)">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#about" class="block nav-link">About</a>
+                <a href="#skills" class="block nav-link">Skills</a>
+                <a href="#experience" class="block nav-link">Experience</a>
+                <a href="#projects" class="block nav-link">Projects</a>
+                <button class="theme-toggle p-2 rounded-full" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- Hero Section -->
     <section id="about" class="min-h-screen flex items-center justify-center px-4 py-16">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <!-- Text container centers on small screens and left-aligns on medium+ -->
-          <div class="flex-1 text-center md:text-left">
-            <p class="text-sm mb-4" style="color: var(--accent-color)">Hi, my name is</p>
-            <!-- Use smaller sizes on very small screens and scale up -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">A N M Jubaer</h1>
-            <!-- Adjust paragraph text size responsively -->
-            <p class="text-base sm:text-xl mb-8 " style="color: var(--text-secondary); text-align: justify;">
-                Experienced backend developer with a strong focus on solving complex business challenges in the travel
-                domain. Proficient in .NET Framework, .NET, with expertise in integrating global distribution systems
-                (GDS) APIs such as Amadeus, Sabre, UAPI and AIrline APIs including NDCs. Experienced in
-                object-oriented programming, SOLID principles, and proficient in Python for data processing and
-                machine learning tasks. Adaptive to front-end technologies and willing to learn as required.
-            </p>
-            <!-- Make the links wrap on smaller screens and center them -->
-            <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
-              <a href="mailto:jubaerad1@gmail.com" class="nav-link">Email</a>
-              <a href="https://github.com/jubaer-ad" target="_blank" class="nav-link">GitHub</a>
-              <a href="https://www.linkedin.com/in/anmjubaer/" target="_blank" class="nav-link">LinkedIn</a>
-              <a href="https://www.kaggle.com/jubaerad" target="_blank" class="nav-link">Kaggle</a>
+            <!-- Text container centers on small screens and left-aligns on medium+ -->
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-sm mb-4" style="color: var(--accent-color)">Hi, my name is</p>
+                <!-- Use smaller sizes on very small screens and scale up -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">A N M Jubaer</h1>
+                <!-- Adjust paragraph text size responsively -->
+                <p class="text-base sm:text-xl mb-8 " style="color: var(--text-secondary); text-align: justify;">
+                    Experienced backend developer with a strong focus on solving complex business challenges in the
+                    travel
+                    domain. Proficient in .NET Framework, .NET, with expertise in integrating global distribution
+                    systems
+                    (GDS) APIs such as Amadeus, Sabre, UAPI and AIrline APIs including NDCs. Experienced in
+                    object-oriented programming, SOLID principles, and proficient in Python for data processing and
+                    machine learning tasks. Adaptive to front-end technologies and willing to learn as required.
+                </p>
+                <!-- Make the links wrap on smaller screens and center them -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+                    <a href="mailto:jubaerad1@gmail.com" class="nav-link">Email</a>
+                    <a href="https://github.com/jubaer-ad" target="_blank" class="nav-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/anmjubaer/" target="_blank" class="nav-link">LinkedIn</a>
+                    <a href="https://www.kaggle.com/jubaerad" target="_blank" class="nav-link">Kaggle</a>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
     <!-- Photo -->
     <section class="py-16 px-4" style="background-color: var(--background-secondary)">
         <div class="max-w-6xl mx-auto">
             <div class="profile-pic w-64 h-90 overflow-hidden mx-auto">
-                <img src="./images/dp-small-600w.jpg" srcset="./images/dp-small-600w.jpg 600w, ./images/dp-mid-1200w.jpg 1200w, ./images/dp-large-1800w.jpg 1800w"
+                <img src="./images/dp-small-600w.jpg"
+                    srcset="./images/dp-small-600w.jpg 600w, ./images/dp-mid-1200w.jpg 1200w, ./images/dp-large-1800w.jpg 1800w"
                     sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Description" loading="lazy">
             </div>
         </div>
@@ -335,6 +357,48 @@
             // Uncomment the line below to show profile picture by default
             toggleProfilePic();
         });
+        // Function to update the clock
+        function updateClock() {
+            const now = new Date();
+
+            // Format day
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayName = days[now.getDay()];
+
+            // Format time with hours, minutes, and seconds
+            let hours = now.getHours();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            // hours = hours % 12;
+            // hours = hours ? hours : 12; // the hour '0' should be '12'
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+
+            const dayNum = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+            // Format date with year
+            const year = now.getFullYear();
+
+            const date = `${dayNum}/${month}/${year}`;
+
+            // Different formats based on screen size
+            if (window.innerWidth < 640) { // Small mobile
+                // Shortest format for very small screens
+                document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds}`;
+            } else if (window.innerWidth < 768) { // Larger mobile/tablet
+                // Medium format for small screens
+                document.getElementById('current-time').textContent = `${dayName}, ${hours}:${minutes}:${seconds}`;
+            } else { // Desktop
+                // Full format for larger screens
+                document.getElementById('current-time').textContent = `${dayName}, ${hours}:${minutes}:${seconds}, ${date}`;
+            }
+        }
+
+        // Call initially and set update interval
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // Update when window is resized
+        window.addEventListener('resize', updateClock);
     </script>
 </body>
 
