@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | A N M Jubaer</title>
+    <meta name="description"
+        content="View or download the latest resume of A N M Jubaer, Senior Software Engineer and Technical Team Lead.">
+    <link rel="canonical" href="https://jubaer-ad.github.io/resume/">
+    <meta property="og:title" content="Resume | A N M Jubaer">
+    <meta property="og:description" content="The latest resume of A N M Jubaer, with PDF and DOCX downloads.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://jubaer-ad.github.io/resume/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            color-scheme: dark;
+            --background-primary: #0a0a0a;
+            --background-secondary: #111111;
+            --background-tertiary: #1a1a1a;
+            --accent-color: #64ffda;
+            --accent-contrast: #06251f;
+            --text-primary: #e6e6e6;
+            --text-secondary: #a3a3a3;
+            --border-color: #2a2a2a;
+        }
+
+        [data-theme="light"] {
+            color-scheme: light;
+            --background-primary: #ffffff;
+            --background-secondary: #f8f8f8;
+            --background-tertiary: #f0f0f0;
+            --accent-color: #0891b2;
+            --accent-contrast: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --border-color: #e5e5e5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: var(--background-primary);
+        }
+
+        body {
+            min-width: 320px;
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text-primary);
+            background: var(--background-primary);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--background-primary);
+            background: color-mix(in srgb, var(--background-primary) 92%, transparent);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav,
+        .page {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .nav {
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            color: var(--accent-color);
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links,
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus-visible {
+            color: var(--accent-color);
+        }
+
+        .theme-toggle {
+            min-width: 58px;
+            height: 40px;
+            padding: 0 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 999px;
+            color: var(--text-primary);
+            background: var(--background-tertiary);
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .page {
+            padding: 44px 0 56px;
+        }
+
+        .intro {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 28px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.05;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: var(--accent-color);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .subtitle,
+        .status {
+            color: var(--text-secondary);
+        }
+
+        .subtitle {
+            max-width: 700px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .button {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 160ms ease, border-color 160ms ease;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .button-primary {
+            border-color: var(--accent-color);
+            color: var(--accent-contrast);
+            background: var(--accent-color);
+        }
+
+        .button-secondary {
+            background: var(--background-tertiary);
+        }
+
+        .viewer {
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--background-secondary);
+            box-shadow: 0 18px 50px rgb(0 0 0 / 18%);
+        }
+
+        .viewer iframe {
+            width: 100%;
+            min-height: 1120px;
+            display: block;
+            border: 0;
+            background: #ffffff;
+        }
+
+        .status {
+            margin: 16px 0 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .status a {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 760px) {
+            .nav {
+                min-height: 60px;
+            }
+
+            .nav-links .nav-link:nth-child(2) {
+                display: none;
+            }
+
+            .page {
+                padding-top: 28px;
+            }
+
+            .intro {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .actions {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .actions .button:last-child {
+                grid-column: 1 / -1;
+            }
+
+            .viewer iframe {
+                min-height: 900px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .brand span {
+                display: none;
+            }
+
+            .actions {
+                grid-template-columns: 1fr;
+            }
+
+            .actions .button:last-child {
+                grid-column: auto;
+            }
+
+            .viewer iframe {
+                min-height: 760px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+            <a class="brand" href="/">A N M Jubaer <span>| Resume</span></a>
+            <div class="nav-links">
+                <a class="nav-link" href="/">Portfolio</a>
+                <a class="nav-link"
+                    href="https://docs.google.com/document/d/1uvOfrpIEd1S0QPQD03qvdhaa29KwhPd4NbDsEVu3lwU/edit?usp=sharing"
+                    target="_blank" rel="noopener noreferrer">Google Docs</a>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme"
+                    onclick="toggleTheme()">Light</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="intro" aria-labelledby="resume-heading">
+            <div>
+                <p class="eyebrow">Always up to date</p>
+                <h1 id="resume-heading">A N M Jubaer's Resume</h1>
+                <p class="subtitle">Senior Software Engineer | Technical Team Lead | Backend &amp; Agentic AI
+                    Development</p>
+            </div>
+            <div class="actions" aria-label="Resume actions">
+                <a class="button button-primary"
+                    href="https://docs.google.com/document/d/1uvOfrpIEd1S0QPQD03qvdhaa29KwhPd4NbDsEVu3lwU/export?format=pdf">
+                    Download PDF
+                </a>
+                <a class="button button-secondary"
+                    href="https://docs.google.com/document/d/1uvOfrpIEd1S0QPQD03qvdhaa29KwhPd4NbDsEVu3lwU/export?format=docx">
+                    Download DOCX
+                </a>
+                <a class="button button-secondary"
+                    href="https://docs.google.com/document/d/e/2PACX-1vS7IrGQkSd4jj1q6C4bl3gBB_97QlUFQyWD2w9BHyzxhMyt-fZn6_yPMgLRl9fDgoChhuf2pA2bAdgt/pub"
+                    target="_blank" rel="noopener noreferrer">
+                    Open Full Page
+                </a>
+            </div>
+        </section>
+
+        <section class="viewer" aria-label="Embedded resume">
+            <iframe
+                src="https://docs.google.com/document/d/e/2PACX-1vS7IrGQkSd4jj1q6C4bl3gBB_97QlUFQyWD2w9BHyzxhMyt-fZn6_yPMgLRl9fDgoChhuf2pA2bAdgt/pub?embedded=true"
+                title="A N M Jubaer's latest resume" loading="eager"
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </section>
+
+        <p class="status">This page displays the version published from Google Docs. Updates may take a few minutes
+            to appear. If the preview does not load, <a
+                href="https://docs.google.com/document/d/e/2PACX-1vS7IrGQkSd4jj1q6C4bl3gBB_97QlUFQyWD2w9BHyzxhMyt-fZn6_yPMgLRl9fDgoChhuf2pA2bAdgt/pub"
+                target="_blank" rel="noopener noreferrer">open the published resume directly</a>.</p>
+    </main>
+
+    <script>
+        const getTheme = () => localStorage.getItem('theme') || 'dark';
+
+        const applyTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const nextTheme = theme === 'light' ? 'dark' : 'light';
+            themeToggle.textContent = nextTheme === 'light' ? 'Light' : 'Dark';
+            themeToggle.setAttribute('aria-label', `Switch to ${nextTheme} theme`);
+        };
+
+        const toggleTheme = () => {
+            applyTheme(getTheme() === 'light' ? 'dark' : 'light');
+        };
+
+        applyTheme(getTheme());
+    </script>
+</body>
+
+</html>
